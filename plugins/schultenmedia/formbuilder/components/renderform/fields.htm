@@ -1,9 +1,0 @@
-{% for field in __SELF__.form.fields %}
-    {% if field.field_type.code == 'file_uploader' %}
-        {% partial __SELF__ ~ '::file_uploader' field = field %}
-    {% elseif field.field_type.code == 'image_uploader' %}
-        {% partial __SELF__ ~ '::image_uploader' field = field %}
-    {% else %}
-        {{ field.html|raw }}
-    {% endif %}
-{% endfor %}
