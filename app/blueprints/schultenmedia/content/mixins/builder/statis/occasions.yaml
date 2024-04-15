@@ -1,0 +1,16 @@
+uuid: ef1c0d21-51bb-4f47-863f-f83478c83212
+handle: Content\StaticOccasions
+name: Occasions sectie
+useTabs: false
+type: mixin
+titleFrom: title
+
+
+fields:
+  _section:
+    type: section
+    label: Occasions sectie
+
+  title:
+    label: Titel
+    span: left

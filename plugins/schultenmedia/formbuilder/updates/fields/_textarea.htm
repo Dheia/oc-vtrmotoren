@@ -1,0 +1,17 @@
+<div class="{{ wrapper_class }} form-group">
+    {% if label %}
+        <label for="{{ name }}" class="{{ label_class }}">{{ label }}</label>
+    {% endif %}
+
+    <textarea
+        id="{{ name }}"
+        name="{{ name }}"
+        class="{{ class }} form-control"
+        placeholder="{{ placeholder }}"
+        {{ custom_attributes|raw }}
+    >{{ default }}</textarea>
+
+    {% if comment %}
+        <p class="help-block">{{ comment|raw }}</p>
+    {% endif %}
+</div>

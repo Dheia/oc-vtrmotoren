@@ -1,0 +1,34 @@
+uuid: d52e596a-a49c-11ed-aa99-4fae4a0d1298
+handle: Content\Hero
+type: mixin
+name: Hero
+
+fields:
+    
+  title:
+    label: Titel
+    span: left
+
+  image:
+    label: Afbeelding
+    type: mediafinder
+    mode: image
+    span: right
+    imageWidth: 200
+    imageHeight: 200
+    maxFiles: 1
+
+  content:
+    label: Inhoud
+    type: richeditor
+    span: left
+
+
+  buttons:
+    type: mixin
+    source: Content\Buttons
+#  advanced_content:
+#    type: mixin
+#    source: Content\AdvancedFields
+#    label: Advanced Settings
+#    tab: Advanced

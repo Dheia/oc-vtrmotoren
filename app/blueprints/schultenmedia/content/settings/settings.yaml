@@ -1,0 +1,285 @@
+uuid: 533c314d-6e80-430c-b278-272cbc6632cf
+handle: Content\Settings
+type: global
+name: Settings
+multisite: sync
+description: Algehele site-instellingen
+
+
+navigation:
+  icon: icon-cog
+  order: 24
+
+fields:
+
+  website_name:
+    tab: Info
+    label: Website Name
+    span: left
+    type: text
+
+  website_logo:
+    tab: Info
+    label: Website logo
+    span: right
+    type: mediafinder
+    mode: image
+
+  homepage:
+    maxItems: 1
+    label: Home Page
+    tab: Info
+    type: entries
+    source: Content\Page
+    span: row
+    spanClass: col-12
+    displayMode: recordfinder
+
+
+  _contact:
+    tab: Info
+    label: Contactgegevens
+    type: section
+
+
+  website_email:
+    tab: Info
+    label: E-mailadres
+    type: text
+    span: left
+    default:
+
+  website_phone:
+    tab: Info
+    label: Telefoon
+    type: text
+    span: right
+    default:
+
+
+  website_address:
+    tab: Info
+    label: Adres
+    span: right
+    default:
+
+  website_footer:
+    tab: Info
+    label: Footer afsluiting
+    type: richeditor
+    span: left
+    default:
+
+  _social:
+    tab: Info
+    label: Social media
+    type: section
+
+  website_social_insta:
+    tab: Info
+    label: Instagram link
+    span: auto
+
+
+  website_social_fb:
+    tab: Info
+    label: FB link
+    span: auto
+
+  website_social_tiktok:
+    tab: Info
+    label: Tiktok link
+    span: auto
+
+  _header_code:
+    type: section
+    label: Header code
+    tab: Code
+
+  header_code:
+    type: codeeditor
+    label: Header code
+    size: huge
+    span: full
+    tab: Code
+    language: html
+
+  _footer_code:
+    type: section
+    label: Footer code
+    tab: Code
+
+  footer_code:
+    type: codeeditor
+    label: Footer code
+    size: huge
+    span: full
+    tab: Code
+    language: html
+
+
+  _contact_block:
+    type: section
+    tab: Dynamische blokken
+    label: Contact
+    span: left
+
+  contact_title:
+    tab: Dynamische blokken
+    label: Titel
+    span: full
+
+  contact_content_left:
+    tab: Dynamische blokken
+    label: Inhoud links
+    type: richeditor
+    size: large
+    span: left
+
+  contact_content_right:
+    tab: Dynamische blokken
+    label: Inhoud rechts
+    type: richeditor
+    size: large
+    span: right
+
+  website_default_hero:
+    tab: Inhoud
+    label: Standaard hero afbeelding
+    span: left
+    type: mediafinder
+    mode: image
+
+  website_default_occasions:
+    tab: Inhoud
+    label: Standaard occasion afbeelding
+    span: left
+    type: mediafinder
+    mode: image
+
+
+  motor_cta:
+    tab: Motorpagina
+    label: Motorpagina
+    type: section
+
+  motor_contact_text:
+    tab: Motorpagina
+    label: Contact tab
+    type: richeditor
+    size: large
+    span: full
+
+  motor_form_text:
+    tab: Motorpagina
+    label: Inruilvoorstel tab
+    type: richeditor
+    size: large
+    span: full
+
+  motor_cta_content:
+    tab: Motorpagina
+    label: Paginabouwer
+    span: full
+    type: mixin
+    source: Content\SettingsBuilder
+
+  _event_cta_content:
+    tab: Eventpagina
+    label: Eventpagina
+    type: section
+
+  event_cta_content:
+    tab: Eventpagina
+    label: Paginabouwer
+    span: full
+    type: mixin
+    source: Content\SettingsBuilder
+
+
+
+
+
+
+  event_success_text:
+    tab: Eventpagina
+    label: Tekst bij succesvolle bestelling
+    type: richeditor
+    size: large
+    span: auto
+
+  event_error_text:
+    tab: Eventpagina
+    label: Tekst bij mislukte bestelling
+    type: richeditor
+    size: large
+    span: auto
+
+  _confirm_page:
+    type: section
+    tab: Configurator
+    label: Boven persoonsgegevens pagina
+
+  confirm_page:
+    label: Boven persoonsgegevens
+    tab: Configurator
+    span: full
+    type: richeditor
+    size: huge
+    translatable: true
+
+
+  _success_page:
+    type: section
+    tab: Configurator
+    label: Afgerond pagina
+
+  success_page:
+    label: Afgerond pagina
+    tab: Configurator
+    span: full
+    type: richeditor
+    size: huge
+    translatable: true
+
+
+  _newsletter_popup:
+    type: section
+    tab: Nieuwsbrief
+    label: Nieuwsbrief popup
+
+  newsletter_title :
+    label: Pop-up titel
+    tab: Nieuwsbrief
+    span: left
+    translatable: true
+
+  newsletter_content:
+    label: Pop-up inhoud
+    tab: Nieuwsbrief
+    span: left
+    type: richeditor
+    translatable: true
+    default: '<p>
+          Blijf op de hoogte van onze wekelijkse aanbiedingen!</p>'
+
+  _popup_block:
+    type: section
+    tab: Reserveer popup
+    label: Reserveer popup
+    span: full
+
+
+  popup_content_left:
+    tab: Reserveer popup
+    label: Contact opnemen
+    type: richeditor
+    size: large
+    span: full
+
+  popup_content_right:
+    tab: Reserveer popup
+    label: Reserveren
+    type: richeditor
+    size: large
+    span: full

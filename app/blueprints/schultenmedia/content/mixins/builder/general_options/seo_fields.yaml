@@ -1,0 +1,126 @@
+uuid: efc8e3e4-5c85-4332-8f64-4e8369898ff5
+
+handle: Content\SEOFields
+type: mixin
+name: SEO Fields
+
+fields:
+  meta_title:
+    label: Meta titel
+    tab: SEO
+    type: text
+    commentAbove: Pagina titel voor weergave in zoekresultaten
+    attributes:
+      maxlength: 70
+    preset:
+      field: title
+      type: exact
+    span: row
+    spanClass: col-12 col-lg-3
+    column: true
+  meta_keywords:
+    label: Meta Keywords
+    type: taglist
+    tab: SEO
+    commentAbove: Zoekwoorden voor weergave in zoekresultaten. Gebruik een komma om woorden te scheiden.
+    span: row
+    spanClass: col-12 col-lg-3
+    column: false
+
+  sharing_image:
+    label: Meta afbeelding
+    tab: SEO
+    type: mediafinder
+    commentAbove: Afbeelding die gebruikt kan worden op sociale media en in de zoekresultaten.
+    mode: image
+    span: row
+    spanClass: col-12 col-lg-6
+    maxItems: 1
+    column: false
+  meta_description:
+    label: Meta omschrijving
+    tab: SEO
+    type: textarea
+    span: row
+    spanClass: col-12 col-lg-6
+    commentAbove: Omschrijving voor vindbaarheid in zoekmahcines. Gebruik niet meer dan 300 karakters.
+    attributes:
+      maxlength: 300
+#   exclude_in_sitemap:
+#     label: Niet toevoegen aan sitemap
+#     type: switch
+#     tab: SEO
+#     span: row
+#     spanClass: col-12 col-lg-6
+#     cssClass: mt-4
+#     comment: Het bestand welke wordt gebruikt om je paginastuctuur in kaart te brengen voor zoekmachines is <a target="_blank" href="/sitemap.xml">sitemap.xml</a>. Wanneer je een pagina niet wil delen met zoekmachines, vink deze optie dan aan.
+#     commentHtml: true
+#     default: unchecked
+#     column: false
+#     scope: false
+#   _seo_advanced:
+#     label: Geavanceerde instellingen
+#     tab: SEO
+#     type: section
+#     span: row
+#     spanClass: col-12
+#   change_frequency:
+#     commentAbove: Hoe vaak moet de crawler je pagina opnieuw indexeren?
+#     label: Sitemap Change Frequency
+#     type: dropdown
+#     span: row
+#     spanClass: col-12 col-lg-3
+#     tab: SEO
+#     default: value[daily]
+#     column: false
+#     scope: false
+#     options:
+#       always: Always
+#       hourly: Hourly
+#       daily: Daily
+#       weekly: Weekly
+#       monthly: Monthly
+#       yearly: Yearly
+#       never: Never
+#     trigger:
+#       action: disable
+#       field: exclude_in_sitemap
+#       condition: checked
+#   priority:
+#     label: URL Priority
+#     commentAbove: Hoe belangrijk is deze pagina ten opzichte van anderen?
+#     type: dropdown
+#     tab: SEO
+#     span: row
+#     spanClass: col-12 col-lg-3
+#     default: value[0.8]
+#     scope: false
+#     column: false
+#     options:
+#       '0.1': '0.1'
+#       '0.2': '0.2'
+#       '0.3': '0.3'
+#       '0.4': '0.4'
+#       '0.5': '0.5'
+#       '0.6': '0.6'
+#       '0.7': '0.7'
+#       '0.8': '0.8'
+#       '0.9': '0.9'
+#       '1.0': '1.0'
+#     trigger:
+#       action: disable
+#       field: exclude_in_sitemap
+#       condition: checked
+#   robots:
+#     label: Robots Info
+#     commentAbove: Geef aan wat zoekmachines moeten doen wanneer ze je pagina vinden. (Standaard is alles uitgevinkt)
+#     tab: SEO
+#     type: checkboxlist
+#     span: row
+#     spanClass: col-12 col-lg-6
+#     quickselect: true
+#     column: false
+#     scope: false
+#     options:
+#       noindex: [No Index, Disallow search engine robots to index this page.]
+#       nofollow: [No Follow, Disallow disallow search engines from crawling the links on this page.]

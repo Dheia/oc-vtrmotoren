@@ -1,0 +1,109 @@
+uuid: 4d0c9657-4813-47ec-9258-4abf0028c24b
+
+handle: Content\SectionColumns
+type: mixin
+name: Sectie kolommen
+titleFrom: title
+
+fields:
+  columns:
+    type: repeater
+    label: Blokken
+    displayMode: builder
+    itemsExpanded: false
+    # span: adaptive
+    prompt: Voeg een blok toe
+    groups: 
+      image:
+        name: Afbeelding
+        fields:
+          image_src:
+            tab: Inhoud
+            type: mediafinder
+            label: Afbeelding
+            mode: image
+            span: left
+
+      text:
+        name: Inhoud blok
+        useTabs: True
+        titleFrom: title
+
+        fields:
+
+            title:
+              label: Titel
+              type: text
+              tab: Algemeen
+              span: left
+              comment:
+
+            title_bold:
+              type: checkbox
+              label: Titel dikgedrukt maken
+              comment: Anders gebruik <span class="font-bold">text</span> om dikgedrukte delen aan te geven
+              span: right
+              tab: Algemeen
+
+            content:
+              tab: Algemeen
+              label: Inhoud
+              type: richeditor
+              size: large
+              span: full
+
+
+            buttons:
+              tab: Algemeen
+              type: mixin
+              source: Content\Buttons
+
+            _settings_bg:
+              tab: Instellingen
+              label: Achtergrond
+              type: section
+              span: full
+
+            settings_bg:
+              label: Achtergrond kleur
+              tab: Instellingen
+              type: dropdown
+              span: auto
+              options:
+                default: Standaard
+                dark: Donker
+                primary: Blauw
+
+            settings_bg_hover:
+              label: Mouseover achtergrond kleur
+              tab: Instellingen
+              type: dropdown
+              span: auto
+              options:
+                default: Standaard
+                dark: Donker
+                primary: Blauw
+
+            settings_bg_image:
+              tab: Instellingen
+              type: mediafinder
+              label: Afbeelding
+              mode: image
+              span: auto
+
+            _settings_alignment:
+              tab: Instellingen
+              label: Uitlijning
+              type: section
+              span: full
+
+            settings_alignment:
+              label: Uitlijning
+              tab: Instellingen
+              type: dropdown
+              span: auto
+              options:
+                default: Links
+                "center": Midden
+                right: Rechts
+

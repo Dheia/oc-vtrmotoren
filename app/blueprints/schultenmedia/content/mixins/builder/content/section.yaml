@@ -1,0 +1,123 @@
+uuid: b8c5420a-e60a-4f0e-868d-5935f586d307
+
+
+handle: Content\Section
+type: mixin
+name: Sectie met instelbare blokken
+titleFrom: title
+# useTabs: true
+
+fields:
+    
+  columns:
+    tab: Inhoud
+    type: mixin
+    source: Content\SectionColumns
+
+#   columns:
+#     tab: Inhoud
+#     type: repeater
+#     span: full
+#     groups:
+#       text: ~/themes/vtrmotoren/builder/blocks/section/column/text.yaml
+#       image: ~/themes/vtrmotoren/builder/blocks/section/column/image.yaml
+
+  _settings_bg:
+    tab: Instellingen
+    label: Achtergrond
+    type: section
+    span: full
+
+  settings_bg:
+    label: Achtergrond kleur
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Standaard
+      dark: Donker
+
+  settings_bg_image:
+    tab: Instellingen
+    type: mediafinder
+    label: Afbeelding
+    mode: image
+    span: auto
+
+  settings_background_text:
+    label: Achtergrond tekst
+    tab: Instellingen
+    span: auto
+
+  settings_effect:
+    tab: Instellingen
+    type: checkbox
+    label: Toon blauwe strepen effect
+    span: auto
+
+  _settings_alignment:
+    tab: Instellingen
+    label: Uitlijning
+    type: section
+    span: full
+
+  settings_alignment:
+    label: Uitlijning
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Links
+      "center": Midden
+      right: Rechts
+
+  settings_alignment_vertical:
+    label: Verticale uitlijning
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      top: Top
+      center: Midden
+      bottom: Onder
+
+
+  settings_padding:
+    label: Padding
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Normaal
+      less: Minder padding gebruiken
+
+  settings_width:
+    label: Breedte
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Normaal
+      narrow: Smal
+
+
+  settings_icon:
+    tab: Instellingen
+    type: mediafinder
+    label: Icoon boven titel
+    mode: image
+    span: auto
+
+  settings_empty_shell:
+    tab: Instellingen
+    type: checkbox
+    label: Gebruik kale sectie
+    comment: Sectie enkel als laag gebruiken, tekstvakken bepalen achtergrond kleur.
+    span: auto
+
+  settings_section_class:
+    tab: Instellingen
+    type: text
+    label: CSS klasse
+    comment:
+    span: auto

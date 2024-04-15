@@ -1,0 +1,47 @@
+uuid: 31c7a237-fee5-11ec-b7e2-1d5410f76a4d
+handle: Content\Buttons
+type: mixin
+name: Button
+
+fields:
+  buttons:
+    type: repeater
+    label: Knoppen
+    maxItems: 3
+    prompt: Knop toevoegen
+    form:
+      fields:
+          text:
+            tab: Algemeen
+            label: Knop tekst
+            span: auto
+
+          style:
+            tab: Algemeen
+            label: Stijl
+            type: dropdown
+            span: auto
+            options:
+              primary: Primary
+              secondary: Secondary
+              outline: Outline
+              text: Tekstlink
+
+          link:
+            tab: Algemeen
+            span: left
+            label: Link
+            type: pagefinder
+
+          external:
+            span: left
+            tab: Algemeen
+            label: Openen in nieuw venster
+            type: checkbox
+
+          arrow:
+            span: right
+            tab: Algemeen
+            label: Toon pijl
+            type: checkbox
+            default: false

@@ -1,0 +1,18 @@
+subject = "Nieuwe boeking via de website"
+description = "Nieuwe boeking via de website"
+layout = "default"
+==
+Gebruik een mailclient welke html ondersteund
+==
+<p>Beste,<br>
+    Er is een nieuwe boeking via de website afgerond.<br><br>
+    Naam: {{title}}.<br >
+    E-mailadres: {{email}}<br>
+    Telefoonnummer: {{phone}}<br>
+    Evenement: {{event.title}}<br>
+    Datum: {{event.date|date('d-m-Y')}}<br>
+    Betaald: {{ paid ? 'Ja' : 'Nee' }}<br>
+    Bedrag: {{ price|number_format(2, ',', '.') }}<br>
+    Opmerkingen: {{description}}<br>
+
+</p>

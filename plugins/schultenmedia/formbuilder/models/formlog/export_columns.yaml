@@ -1,0 +1,44 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: schultenmedia.formbuilder::lang.field.id
+
+    form_id:
+        label: schultenmedia.formbuilder::lang.field.form_id
+
+    form_name:
+        label: schultenmedia.formbuilder::lang.field.form_name
+
+    form_data:
+        label: schultenmedia.formbuilder::lang.field.form_data
+
+    content_html:
+        label: schultenmedia.formbuilder::lang.field.content_html
+
+    subject:
+        label: schultenmedia.formbuilder::lang.field.subject
+
+    from:
+        label: schultenmedia.formbuilder::lang.field.from
+
+    to:
+        label: schultenmedia.formbuilder::lang.field.to
+
+    cc:
+        label: schultenmedia.formbuilder::lang.field.cc
+
+    bcc:
+        label: schultenmedia.formbuilder::lang.field.bcc
+
+    ip_address:
+        label: schultenmedia.formbuilder::lang.field.ip_address
+
+    created_at:
+        label: schultenmedia.formbuilder::lang.field.created_at
+
+    updated_at:
+        label: schultenmedia.formbuilder::lang.field.updated_at

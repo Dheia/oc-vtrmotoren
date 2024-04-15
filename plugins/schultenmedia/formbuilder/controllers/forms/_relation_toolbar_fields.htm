@@ -1,0 +1,46 @@
+<div data-control="toolbar">
+
+    <a data-control="popup" data-size="huge" data-handler="onRelationButtonCreate" href="javascript:"
+       class="btn btn-sm btn-primary oc-icon-code">
+        <?php echo e(trans('schultenmedia.formbuilder::lang.field.add')) ?>
+    </a>
+
+    <button class="btn btn-sm btn-danger oc-icon-trash-o control-disabled" onclick="$(this).data('request-data', {
+            checked: $('#Forms-update-RelationController-fields-view .control-list').listWidget('getChecked')
+        })" disabled="" data-request="onRelationButtonDelete"
+            data-request-confirm="<?php echo e(trans('backend::lang.relation.delete_confirm')) ?>"
+            data-trigger-action="enable"
+            data-trigger="#Forms-update-RelationController-fields-view .control-list input[type=checkbox]"
+            data-trigger-condition="checked" data-stripe-load-indicator="">
+        <?php echo e(trans('backend::lang.relation.delete')) ?>
+    </button>
+
+    <?php foreach ($relationToolbarButtons as $button): ?>
+        <?php if ($button == 'update'): ?>
+            <?= $this->relationMakePartial('button_update', [
+                'relationManageId' => $relationViewModel->getKey()
+            ]) ?>
+        <?php elseif($button == 'reorder'): ?>
+            <?php if ($formModel->id) : ?>
+                <a
+                    href="<?= Backend::url('schultenmedia/formbuilder/fields/reorder/' . $formModel->id) ?>"
+                    class="btn btn-sm btn-secondary">
+                    <i class="octo-icon-text-format-ul"></i> <?= e(trans('schultenmedia.formbuilder::lang.fields.reorder')) ?>
+                </a>
+            <?php endif ?>
+        <?php elseif($button == 'raw_fields'): ?>
+            <?php if ($formModel->id) : ?>
+                <button
+                    type="button"
+                    data-control="popup"
+                    data-handler="onLoadRawFieldsPopup"
+                    data-size="giant"
+                    class="btn btn-sm btn-secondary">
+                    <i class="octo-icon-code-snippet"></i> <?= e(trans('schultenmedia.formbuilder::lang.field.raw_fields')) ?>
+                </button>
+            <?php endif ?>
+        <?php else: ?>
+            <?/*= $this->relationMakePartial('button_'.$button) */?>
+        <?php endif ?>
+    <?php endforeach ?>
+</div>

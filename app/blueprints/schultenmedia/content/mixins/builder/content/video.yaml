@@ -1,0 +1,22 @@
+uuid: 82406452-161f-4b65-8cbb-163e375e7347
+
+
+handle: Content\Video
+type: mixin
+name: Tekst
+titleFrom: title
+
+fields:
+    
+  title:
+    label: Titel
+    type: text
+    tab: Algemeen
+    span: left
+
+  video:
+    tab: Algemeen
+    label: Video url
+    span: auto
+
+

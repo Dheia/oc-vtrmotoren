@@ -1,0 +1,78 @@
+uuid: d05694e1-da31-4dbf-bd7e-1ac84bcca690
+handle: Shop\Booking
+type: entry
+name: Boeking
+drafts: false
+multisite: false
+pagefinder: false
+
+navigation:
+    icon: icon-calendar-enable
+    order: 10
+    parent: Content\Occasion
+
+
+fields:
+
+    event:
+        source: Content\Event
+        maxItems: 1
+        type: entries
+        displayMode: relation
+        span: auto
+        label: Geboekt voor
+
+    identifier:
+        label: Datum
+        span: auto
+        type: datepicker
+        mode: date
+
+    email:
+        label: E-mailadres
+        span: auto
+
+    phone:
+        label: Telefoonnummer
+        span: auto
+
+    description:
+        label: Opmerkingen
+        type: textarea
+        size: small
+        span: auto
+        column: false
+        
+    specifications:
+        label: Opties
+        column: false
+        span: left
+        type: text
+        # type: repeater
+        # form:
+        #     fields:
+        #         label:
+        #             label: Label
+        #             span: auto
+        #         value:
+        #             label: Waarde
+        #             span: Auto
+
+
+    hr_post_content:
+        type: ruler
+        translatable: false
+
+    price:
+        label: Bedrag
+        span: auto
+
+    paid:
+        label: Betaald
+        type: checkbox
+        span: auto
+
+    security_token:
+        label: Beveiligingscode
+        type: text
+        hidden: true

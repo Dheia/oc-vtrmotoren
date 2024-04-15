@@ -1,0 +1,32 @@
+subject = "Kopie aanvraag via de VTR configurator"
+description = "Kopie aanvraag via de VTR configurator"
+layout = "default"
+==
+Gebruik een mailclient welke html ondersteund
+==
+<p>Beste {{name}},<br>
+    Bedankt voor je aanvraag via de configurator. Hierbij een kopie.<br><br>
+    Naam: {{name}}.<br >
+    E-mailadres: {{email}}<br>
+    Telefoonnummer: {{phone}}<br>
+    Adres: {{street}}<br>
+    Postcode: {{zipcode}}<br>
+    Plaats: {{city}}<br>
+    Land: {{country}}<br>
+    Opmerkingen: {{description}}<br>
+
+<br>
+    <strong>Object:</strong> {{ object.title }}<br>
+    <strong>Gekozen opties:</strong><br>
+
+    {% for option in options %}
+        {{ option.property }}: {{ option.option }} {{ option.price != '' ? '€ ' ~ option.price }}<br>
+    {% endfor %}
+
+    <br>
+    <br>
+    Ze zullen zo spoedig mogelijk contact opnemen om de aanvrag door te spreken.<br><br>
+    Met vriendelijke groet,<br>
+    VTR Motoren
+    </brR>
+</p>

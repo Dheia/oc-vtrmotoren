@@ -1,0 +1,8 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+export:
+    title: schultenmedia.formbuilder::lang.log.export_to_csv
+    modelClass: SchultenMedia\FormBuilder\Models\FormLogExport
+    list: $/schultenmedia/formbuilder/models/formlog/export_columns.yaml

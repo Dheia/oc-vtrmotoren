@@ -1,0 +1,32 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    subject:
+        label: schultenmedia.formbuilder::lang.field.subject
+        searchable: true
+
+    from:
+        label: schultenmedia.formbuilder::lang.field.from
+        searchable: true
+
+    to:
+        label: schultenmedia.formbuilder::lang.field.recipients
+        searchable: true
+
+    form_name:
+        label: schultenmedia.formbuilder::lang.field.form
+        relation: form
+        select: name
+        searchable: true
+        invisible: true
+
+    ip_address:
+        label: schultenmedia.formbuilder::lang.field.ip_address
+        searchable: true
+
+    created_at:
+        label: schultenmedia.formbuilder::lang.field.send_at
+        type: datetime

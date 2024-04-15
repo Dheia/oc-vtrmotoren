@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: schultenmedia.formbuilder::lang.fields.reorder
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: SchultenMedia\FormBuilder\Models\Field
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

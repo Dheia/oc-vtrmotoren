@@ -1,0 +1,20 @@
+subject = "Copy cooking VTR Motoren"
+description = "Copy cooking via VTR Motoren"
+layout = "default"
+==
+Gebruik een mailclient welke html ondersteund
+==
+<p>Dear {{ title }},<br>
+    Thank you for your booking through our website.<br><br>
+    Name: {{title}}.<br>
+    Email address: {{email}}<br>
+    Phone number: {{phone}}<br>
+    Event: {{event.title}}<br>
+    Date: {{event.date|date('d-m-Y')}}<br>
+    Paid: {{ paid ? 'Yes' : 'No' }}<br>
+    Amount: {{ price|number_format(2, ',', '.') }}<br>
+    Remarks: {{description}}<br>
+    <br>
+    Sincerely,<br>
+    VTR Motors
+</p>

@@ -1,0 +1,13 @@
+uuid: f2e4a785-8c06-4c42-ba4b-db40ec042ad6
+
+
+
+handle: Content\StaticFirstEvents
+type: mixin
+name: Eerstvolgende events
+
+fields:
+    
+  title:
+    label: Titel
+    span: left

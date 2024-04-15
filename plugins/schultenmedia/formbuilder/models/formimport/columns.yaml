@@ -1,0 +1,30 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    id: schultenmedia.formbuilder::lang.field.id
+    name: schultenmedia.formbuilder::lang.field.name
+    code: schultenmedia.formbuilder::lang.field.code
+    description: schultenmedia.formbuilder::lang.field.description
+    from_email: schultenmedia.formbuilder::lang.field.from_email
+    from_name: schultenmedia.formbuilder::lang.field.from_name
+    recipients: schultenmedia.formbuilder::lang.field.recipients
+    cc_recipients: schultenmedia.formbuilder::lang.field.cc_recipients
+    bcc_recipients: schultenmedia.formbuilder::lang.field.bcc_recipients
+    success_message: schultenmedia.formbuilder::lang.field.success_message
+    error_message: schultenmedia.formbuilder::lang.field.error_message
+    css_class: schultenmedia.formbuilder::lang.field.css_class
+    reply_email: schultenmedia.formbuilder::lang.field.reply_email
+    reply_name: schultenmedia.formbuilder::lang.field.reply_name
+    response_email: schultenmedia.formbuilder::lang.field.response_email
+    response_name: schultenmedia.formbuilder::lang.field.response_name
+    redirect_to: schultenmedia.formbuilder::lang.field.redirect_to
+    template_code: schultenmedia.formbuilder::lang.field.template
+    response_template_code: schultenmedia.formbuilder::lang.field.response_template
+    markup: schultenmedia.formbuilder::lang.field.markup
+    has_floating_labels: schultenmedia.formbuilder::lang.field.has_floating_labels
+    created_at: schultenmedia.formbuilder::lang.field.created_at
+    updated_at: schultenmedia.formbuilder::lang.field.updated_at
+    fields: schultenmedia.formbuilder::lang.tab.fields

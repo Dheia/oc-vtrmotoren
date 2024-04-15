@@ -1,0 +1,32 @@
+uuid: cbe97761-6810-11ed-a1b7-7575a4dff238
+handle: Content\SectionHeader
+type: mixin
+name: Section Header
+
+fields:
+  title:
+    label: Titel
+    type: text
+    span: full
+    tab: General
+#  image:
+#    label: Image
+#    type: mediafinder
+#    span: left
+#    mode: image
+#    maxItems: 1
+#    tab: Background Image
+#  image_description:
+#    label: Image Description
+#    type: text
+#    span: right
+#    tab: Background Image
+#  style:
+#    label: Style
+#    type: dropdown
+#    span: full
+#    tab: Style
+#    options:
+#      none: None
+#      light: Light
+#      dark: Dark

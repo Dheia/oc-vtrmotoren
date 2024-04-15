@@ -1,0 +1,15 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+fields:
+    label: schultenmedia.formbuilder::lang.relation.field
+    view:
+        list: $/schultenmedia/formbuilder/models/field/columns.yaml
+        toolbarPartial: relation_toolbar_fields
+        toolbarButtons: create|delete|reorder|raw_fields
+        showSearch: true
+        showSorting: false
+        recordsPerPage: 10
+    manage:
+        form: $/schultenmedia/formbuilder/models/field/fields.yaml

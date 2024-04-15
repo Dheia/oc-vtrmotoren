@@ -1,0 +1,75 @@
+uuid: 979c71ce-4443-4667-81ed-515ecca79cfc
+
+handle: Content\Event
+type: entry
+name: Evenementen
+drafts: true
+multisite: sync
+pagefinder: false
+
+structure:
+  maxDepth: 0
+
+
+navigation:
+  label: Evenementen
+  icon: icon-calendar
+  order: 141
+  parent: Content\Occasion
+
+
+customMessages:
+  buttonCreate: Nieuw evenement
+
+columns:
+  title: Titel
+  date: Startdatum
+  end_date: Einddatum
+
+
+
+groups:
+  simple:
+    name: Evenement
+    fields:
+    #   content:
+    #     label: Inhoud
+    #     tab: Bewerken
+    #     type: richeditor
+    #     span: adaptive
+      event_attributes:
+        type: mixin
+        name: Content
+        source: Content\EventAttributes
+      seo_fields:
+        tab: Manage
+        type: mixin
+        name: SEO Fields
+        source: Content\SEOFields
+        
+
+#   pagebuilder:
+#     name: Pagebuilder
+#     fields:
+#     #   builder:
+#     #     tab: Edit
+#     #     type: mixin
+#     #     name: Builder
+#     #     source: Content\Builder
+#       boxes_content:
+#         label: Inhoud
+#         span: adaptive         # This makes sure the Boxes Editor looks good in Tailor.
+#         type: boxes            # This loads the Boxes Editor.
+#         previewLayout: main # Optional, the CMS layout to use for the preview.
+#         template: blog # apply the "blog" page template
+
+#       event_attributes:
+#         type: mixin
+#         name: Content
+#         source: KOSC\EventAttributes
+#       seo_fields:
+#         tab: Manage
+#         type: mixin
+#         name: SEO Fields
+#         source: Content\SEOFields
+   

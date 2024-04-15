@@ -1,0 +1,185 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+size: 950
+
+tabs:
+  fields:
+
+    properties:
+      tab: Configurator
+      type: repeater
+      label: Configurator opties
+      displayMode: builder
+      span: full
+      form:
+        fields:
+          property:
+            label: Eigenschap
+            translatable: true
+            span: auto
+
+#          type:
+#            label: Type eigenschap
+#            span: auto
+#            type: dropdown
+#            options:
+#              optional: Optioneel
+#              required: Verplicht
+
+          display_mode:
+            label: Weergave
+            span: auto
+            type: dropdown
+            options:
+              list: Lijst
+              images: Afbeeldingen
+
+          options:
+            label: Opties
+            type: repeater
+            prompt: Nieuwe optie toevoegen
+            useTabs: true
+            itemsExpanded: false
+            form:
+              fields:
+                option:
+                  tab: Optie
+                  label: Optie
+                  translatable: true
+                  default: As-is
+                  span: auto
+
+                image:
+                  tab: Optie
+                  type: mediafinder
+                  label: Afbeelding
+                  mode: image
+                  maxItems: 1
+                  span: auto
+
+                price:
+                  tab: Optie
+                  label: Meerprijs
+                  span: auto
+
+
+                display_mode:
+                  tab: Subopties
+                  label: Weergave
+                  span: left
+                  type: dropdown
+                  options:
+                    list: Lijst
+                    images: Afbeeldingen
+
+                options:
+                  tab: Subopties
+                  label: Suboptie
+                  type: repeater
+                  prompt: Nieuwe sub-optie toevoegen
+                  itemsExpanded: false
+                  tabs: true
+                  form:
+                    fields:
+                      option:
+                        label: Optie
+                        default: As-is
+                        span: auto
+                        translatable: true
+
+                      image:
+                        type: mediafinder
+                        label: Afbeelding
+                        mode: image
+                        maxItems: 1
+                        span: right
+
+                      price:
+                        label: Meerprijs
+                        span: auto
+
+#                      limitations:
+#                        label: Beperken
+#                        commentAbove: Keuzemogelijkhied beperken tot modellen
+#                        type: checkboxlist
+#                        options: getLimitationsOptions
+
+                limitations:
+                  tab: Geavanceerd
+                  label: Beperken
+                  commentAbove: Keuzemogelijkhied beperken tot modellen
+                  type: checkboxlist
+                  options: getLimitationsOptions
+
+
+
+
+                  # type:
+                  #     label: Type optie
+                  #     type: dropdown
+                  #     span: auto
+                  #     options:
+                  #         default: Normaal
+
+    configurator_brands:
+      type: repeater
+      tab: Eigenschappen
+      label: Configurator merken
+      itemsExpanded: false
+      form:
+        fields:
+          title:
+            label: Naam
+            span: auto
+          slug:
+            label: Slug
+            span: auto
+            preset:
+              field: title
+          types:
+            type: repeater
+            tab: Eigenschappen
+            label: Configurator types
+            itemsExpanded: false
+            form:
+              fields:
+                title:
+                  label: Naam
+                  span: row
+                  spanClass: col-4
+                slug:
+                  label: Slug
+                  span: row
+                  spanClass: col-4
+                  preset:
+                    field: title
+
+
+
+    mollie_mode:
+      label: Mollie modes
+      type: dropdown
+      tab: Mollie
+      span: left
+      options:
+        test: Test
+        live: Live
+
+    test_api_key:
+      label: Test api key
+      tab: Mollie
+      span: right
+
+    live_api_key:
+      label: Live api key
+      tab: Mollie
+      span: right
+
+    admin_email:
+      label: Admin e-mail
+      tab: Mollie
+      default: info@schultenmedia.nl
+
+

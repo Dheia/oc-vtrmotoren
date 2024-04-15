@@ -1,0 +1,24 @@
+# Exclude all by default
+*
+
+# Include project-specific files
+!.gitignore
+!composer.*
+!.env.*
+!auth.json
+!app
+!app/**/*
+!themes
+!themes/**/*
+!plugins
+!plugins/schultenmedia/
+!plugins/schultenmedia/*
+!plugins/schultenmedia/*/*
+!plugins/schultenmedia/*/*/*
+!plugins/schultenmedia/*/*/*/*
+!plugins/schultenmedia/*/*/*/*/
+!plugins/schultenmedia/*/*/*/*/*
+!plugins/schultenmedia/*/*/*/*/*/
+!plugins/schultenmedia/*/*/*/*/*/*
+
+plugins/schultenmedia/*/vendor

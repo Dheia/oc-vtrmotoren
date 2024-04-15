@@ -1,0 +1,43 @@
+uuid: c6733114-3534-43f2-aae5-afae7d9220df
+
+handle: Content\Menu
+type: structure
+name: Hoofd menu
+drafts: false
+multisite: sync
+pagefinder: false
+
+
+structure:
+  maxDepth: 2
+
+
+navigation:
+  icon: icon-location-arrow
+  order: 2
+  parent: Content\Page
+
+
+# customMessages:
+#   buttonCreate: Nieuw menu
+
+# fields:
+#     items:
+#         type: repeater
+#         label: Menu items
+#         prompt: Nieuw item
+#         form:
+#             fields:
+#                 menu_item:
+#                     type: mixin
+#                     name: Menu Selections
+#                     source: Content\MenuSelections
+
+customMessages:
+  buttonCreate: New Menu Item
+
+fields:
+  menu_selections:
+    type: mixin
+    name: Menu Selections
+    source: Content\MenuSelections

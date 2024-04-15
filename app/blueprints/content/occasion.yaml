@@ -1,0 +1,196 @@
+uuid: b84dea7a-c0f7-42f8-abcb-946c8d577618
+
+handle: Content\Occasion
+type: entry
+name: Aanbod
+multisite: false
+drafts: false
+
+primaryNavigation:
+    label: VTR
+    order: 140
+    icon: icon-motorcycle
+
+navigation:
+  label: Motoren
+  order: 99
+  icon: icon-motorcycle
+
+
+customMessages:
+  buttonCreate: Nieuwe motor
+
+fields:
+
+    highlights:
+        tab: Algemeen
+        label: Korte omschrijving
+        type: textarea
+        size: small
+        span: left
+        column: false
+
+    configureerbaar:
+        label: Configureerbaar
+        span: right
+        tab: Algemeen
+        type: checkbox
+    verkocht:
+        label: Verkocht
+        span: right
+        tab: Algemeen
+        type: checkbox
+    nieuw:
+        label: Nieuw
+        span: right
+        tab: Algemeen
+        type: checkbox
+
+    description:
+        tab: Algemeen
+        label: Omschrijving
+        type: richeditor
+        size: small
+        span: left
+        column: false
+        # spanClass: col-sm-8
+
+    voertuignr_hexon:
+        label: Voertuignummer Hexon
+        span: auto
+        tab: Details
+        column: false
+    voertuigsoort:
+        label: Soort voertuig
+        span: auto
+        tab: Details
+        column: true
+    carrosserie:
+        label: Soort carrosserie
+        span: auto
+        tab: Details
+        column: false
+    type:
+        label: Type
+        span: auto
+        tab: Details
+        column: true
+    model:
+        label: Model
+        span: auto
+        tab: Details
+        column: true
+    transmissie:
+        label: Transmissie
+        span: auto
+        tab: Details
+        column: false
+    tellerstand:
+        label: Tellerstand
+        span: auto
+        tab: Details
+        column: false
+    merk:
+        label: Merk
+        span: auto
+        tab: Details
+        column: true
+
+    kenteken:
+        label: Kenteken
+        span: auto
+        tab: Details
+        column: true
+    brandstof:
+        label: Brandstof
+        span: auto
+        tab: Details
+        column: false
+    bouwjaar:
+        label: Bouwjaar
+        span: auto
+        tab: Details
+        column: false
+    basiskleur:
+        label: Kleur
+        span: auto
+        tab: Details
+        column: false
+    btw_marge:
+        label: Btw of Marge
+        span: auto
+        tab: Details
+        column: false
+    verkoopprijs:
+        span: auto
+        tab: Details
+        label: Verkoopprijs
+        column: false
+    vermogen_motor_pk:
+        span: auto
+        tab: Details
+        label: vermogen_motor_pk
+        column: false
+    vermogen_motor_kw:
+        span: auto
+        tab: Details
+        label: vermogen_motor_kw
+        column: false
+    cilinderinhoud:
+        column: false
+        span: auto
+        tab: Details
+        label: cilinderinhoud
+    aantal_cilinders:
+        span: auto
+        tab: Details
+        label: aantal_cilinders
+        column: false
+        
+    accessoires:
+        span: auto
+        tab: Details
+        label: Accessoires
+        type: textarea
+        column: false
+        
+
+
+    specifications:
+        tab: Specificaties
+        label: Specificaties
+        type: repeater
+        span: left
+        column: false
+        
+        form:
+            fields:
+                label:
+                    label: Label
+                    span: auto
+                value:
+                    label: Waarde
+                    span: Auto
+
+    images:
+        tab: Afbeeldingen
+        label: Afbeeldingen
+        type: fileupload
+        mode: image
+        span: left
+        imageHeight: 260
+        imageWidth: 260
+        # column: false
+
+    seo_fields:
+        tab: Manage
+        type: mixin
+        name: SEO Fields
+        source: Content\SEOFields
+
+    sort_order:
+        type: number
+        default: 999
+        label: Sortering
+        column: false
+        hidden: true

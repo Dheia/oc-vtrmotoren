@@ -1,0 +1,21 @@
+{% if location_plugin_enabled %}
+    <div class="{{ wrapper_class }} form-group">
+        {% if label %}
+            <label for="{{ name }}" class="{{ label_class }}">{{ label }}</label>
+        {% endif %}
+
+        {{ form_select_state(name, null, null, {
+            id: name,
+            class: class ~ ' form-control state-select',
+            emptyOption: placeholder
+        }) }}
+
+        {% if comment %}
+            <p class="help-block">{{ comment|raw }}</p>
+        {% endif %}
+    </div>
+{% else %}
+    <div class="alert alert-warning" role="alert">
+        You must install <a target="_blank" href="https://octobercms.com/plugin/SchultenMedia-location">Location Plugin</a> to use location fields!
+    </div>
+{% endif %}

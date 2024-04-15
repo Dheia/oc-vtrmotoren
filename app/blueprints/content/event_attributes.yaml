@@ -1,0 +1,131 @@
+uuid: 8ec42098-c9fc-44a2-a87e-4000316145a8
+
+handle: Content\EventAttributes
+type: mixin
+name: Evenement attributen
+multisite: sync
+drafts: false
+
+    
+fields:
+
+  image:
+    tab: Manage
+    label: Afbeelding
+    type: fileupload
+    column: false
+    mode: image
+    maxFiles: 1
+    span: right
+    translatable: false
+
+  excerpt:
+    tab: Manage
+    label: Samenvatting
+    type: textarea
+    size: small
+    column: false
+    span: left
+    cssClass: mb-3
+
+  location:
+    type: text
+    label: Locatie
+    tab: Manage
+    commentAbove: Waar vind het evenement plaats?
+    span: right
+
+  date:
+    label: Datum
+    tab: Manage
+    span: right
+    commentAbove: Startdatum evenement
+    type: datepicker
+    mode: date
+    validation: required
+    translatable: false
+    
+  content:
+    tab: Manage
+    label: Lees meer informatie
+    type: richeditor
+    size: huge
+    column: false
+    span: left
+    cssClass: mb-3
+
+  hr_post_content:
+    type: ruler
+    tab: Manage
+    translatable: false
+
+  bookable:
+    tab: Manage
+    label: Boekbaar event
+    type: checkbox
+    comment: Dit evenement is te boeken
+    span: left
+    translatable: false
+
+  hide_date:
+    tab: Manage
+    span: left
+    comment: Verberg de datum
+    label: Datum verbergen
+    type: checkbox
+
+
+  price:
+    tab: Manage
+    label: Prijs
+    span: right
+    translatable: false
+
+  options:
+    tab: Manage
+    label: Opties
+    type: repeater
+    form:
+        fields:
+            label:
+                label: Eigenschap
+                span: left
+            options:
+                label: Opties
+                type: repeater
+                span: right
+                form:
+                    fields:
+                        optie:
+                            label: Optie
+    span: right
+    translatable: false
+
+
+
+
+  images:
+    tab: Afbeeldingen
+    label: Afbeeldingen
+    type: fileupload
+    mode: image
+    span: left
+    imageHeight: 260
+    imageWidth: 260
+
+
+#   end_date:
+#     label: Einddatum
+#     tab: Manage
+#     span: right
+#     commentAbove: Einddatum evenement
+#     type: datepicker
+#     mode: datetime
+#     dependsOn: [ whole_day ]
+
+#   whole_day:
+#     label: Event duurt hele dag
+#     tab: Manage
+#     span: left
+#     comment: Geen specifieke tijden weergeven
+#     type: checkbox

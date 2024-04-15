@@ -1,0 +1,17 @@
+<div class="{{ wrapper_class }} checkbox form-group">
+    <label for="{{ name }}" class="{{ label_class }}">
+        <input
+            id="{{ name }}"
+            name="{{ name }}"
+            class="{{ class }}"
+            value="1"
+            type="checkbox"
+            {{ default ? 'checked' : '' }}
+            {{ custom_attributes|raw }}
+        > {{ label }}
+    </label>
+
+    {% if comment %}
+        <p class="help-block">{{ comment|raw }}</p>
+    {% endif %}
+</div>

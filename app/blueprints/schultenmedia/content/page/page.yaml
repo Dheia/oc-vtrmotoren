@@ -1,0 +1,66 @@
+uuid: 698afed6-70f1-47dd-9dcf-dc2a0f903ff2
+
+handle: Content\Page
+type: structure
+name: Pagina's
+drafts: false
+multisite: sync
+pagefinder: item
+
+primaryNavigation:
+    label: Pagina's
+    order: 140
+    iconSvg: /plugins/schultenmedia/vtr/assets/images/pages-icon.svg
+
+navigation:
+  icon: icon-file
+  order: 1
+
+customMessages:
+  buttonCreate: Nieuwe pagina
+
+groups:
+  simple:
+    name: Simpele pagina
+    fields:
+      content:
+        label: Content
+        tab: Edit
+        type: richeditor
+        span: adaptive
+      image:
+        tab: Manage
+        label: Hero afbeelding
+        commentAbove: Afbeelding bovenaan de pagina
+        type: mediafinder
+        mode: image
+        maxItems: 1
+        span: full
+      seo_fields:
+        tab: Manage
+        type: mixin
+        name: SEO Fields
+        source: Content\SEOFields
+      code_fields:
+        tab: Manage
+        type: mixin
+        name: SEO Fields
+        source: Content\CodeFields
+  builder:
+    name: Dynamische pagina
+    fields:
+      builder:
+        tab: Edit
+        type: mixin
+        name: Builder
+        source: Content\Builder
+      seo_fields:
+        tab: Manage
+        type: mixin
+        name: SEO Fields
+        source: Content\SEOFields
+      code_fields:
+        tab: Manage
+        type: mixin
+        name: SEO Fields
+        source: Content\CodeFields

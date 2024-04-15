@@ -1,0 +1,182 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: schultenmedia.formbuilder::lang.field.name
+        span: left
+
+    template_code:
+        label: schultenmedia.formbuilder::lang.field.template
+        type: dropdown
+        options: listMailTemplates
+        emptyOption: schultenmedia.formbuilder::lang.field.empty
+        span: right
+
+tabs:
+
+    fields:
+
+        from_email:
+            label: schultenmedia.formbuilder::lang.field.from_email
+            tab: schultenmedia.formbuilder::lang.tab.details
+            span: left
+
+        from_name:
+            label: schultenmedia.formbuilder::lang.field.from_name
+            tab: schultenmedia.formbuilder::lang.tab.details
+            span: right
+
+        description:
+            label: schultenmedia.formbuilder::lang.field.description
+            tab: schultenmedia.formbuilder::lang.tab.details
+            type: textarea
+            size: tiny
+
+        fields:
+            tab: schultenmedia.formbuilder::lang.tab.fields
+            type: partial
+            path: field_fields
+
+        _section_recipients:
+            label: schultenmedia.formbuilder::lang.field.recipients
+            tab: schultenmedia.formbuilder::lang.tab.recipients
+            type: section
+            comment: schultenmedia.formbuilder::lang.comment.recipients
+
+        recipients:
+            type: repeater
+            tab: schultenmedia.formbuilder::lang.tab.recipients
+            titleFrom: email
+            minItems: 1
+            prompt: schultenmedia.formbuilder::lang.comment.new_recipient
+            form:
+                fields:
+                    email:
+                        label: schultenmedia.formbuilder::lang.field.email
+                        span: left
+                    recipient_name:
+                        label: schultenmedia.formbuilder::lang.field.recipient_name
+                        span: right
+
+        _section_cc_recipients:
+            label: schultenmedia.formbuilder::lang.field.cc_recipients
+            tab: schultenmedia.formbuilder::lang.tab.recipients
+            type: section
+            comment: schultenmedia.formbuilder::lang.comment.cc_recipients
+
+        cc_recipients:
+            type: repeater
+            tab: schultenmedia.formbuilder::lang.tab.recipients
+            titleFrom: email
+            prompt: schultenmedia.formbuilder::lang.comment.new_recipient
+            form:
+                fields:
+                    email:
+                        label: schultenmedia.formbuilder::lang.field.email
+                        span: left
+                    recipient_name:
+                        label: schultenmedia.formbuilder::lang.field.recipient_name
+                        span: right
+
+        _section_bcc_recipients:
+            label: schultenmedia.formbuilder::lang.field.bcc_recipients
+            tab: schultenmedia.formbuilder::lang.tab.recipients
+            type: section
+            comment: schultenmedia.formbuilder::lang.comment.bcc_recipients
+
+        bcc_recipients:
+            type: repeater
+            tab: schultenmedia.formbuilder::lang.tab.recipients
+            titleFrom: email
+            prompt: schultenmedia.formbuilder::lang.comment.new_recipient
+            form:
+                fields:
+                    email:
+                        label: schultenmedia.formbuilder::lang.field.email
+                        span: left
+                    recipient_name:
+                        label: schultenmedia.formbuilder::lang.field.recipient_name
+                        span: right
+
+        success_message:
+            label: schultenmedia.formbuilder::lang.field.success_message
+            tab: schultenmedia.formbuilder::lang.tab.messages
+            type: textarea
+            size: tiny
+            comment: schultenmedia.formbuilder::lang.comment.success_message
+
+        error_message:
+            label: schultenmedia.formbuilder::lang.field.error_message
+            tab: schultenmedia.formbuilder::lang.tab.messages
+            type: textarea
+            size: tiny
+            comment: schultenmedia.formbuilder::lang.comment.error_message
+
+        reply_email:
+            label: schultenmedia.formbuilder::lang.field.reply_email
+            tab: schultenmedia.formbuilder::lang.tab.reply
+            type: dropdown
+            options: getFieldsOptions
+            comment: schultenmedia.formbuilder::lang.comment.reply_email
+            emptyOption: schultenmedia.formbuilder::lang.field.empty
+            dependsOn: fields
+            context: update
+            span: left
+
+        reply_name:
+            label: schultenmedia.formbuilder::lang.field.reply_name
+            tab: schultenmedia.formbuilder::lang.tab.reply
+            type: dropdown
+            options: getFieldsOptions
+            comment: schultenmedia.formbuilder::lang.comment.reply_name
+            emptyOption: schultenmedia.formbuilder::lang.field.empty
+            dependsOn: fields
+            context: update
+            span: right
+
+        response_template_code:
+            label: schultenmedia.formbuilder::lang.field.response_template
+            tab: schultenmedia.formbuilder::lang.tab.response
+            type: dropdown
+            options: listMailTemplates
+            emptyOption: schultenmedia.formbuilder::lang.field.empty
+            context: update
+            span: left
+
+        response_email:
+            label: schultenmedia.formbuilder::lang.field.response_email
+            tab: schultenmedia.formbuilder::lang.tab.response
+            type: dropdown
+            options: getFieldsOptions
+            comment: schultenmedia.formbuilder::lang.comment.response_email
+            emptyOption: schultenmedia.formbuilder::lang.field.empty
+            dependsOn: fields
+            context: update
+            span: left
+
+        response_name:
+            label: schultenmedia.formbuilder::lang.field.response_name
+            tab: schultenmedia.formbuilder::lang.tab.response
+            type: dropdown
+            options: getFieldsOptions
+            comment: schultenmedia.formbuilder::lang.comment.response_name
+            emptyOption: schultenmedia.formbuilder::lang.field.empty
+            dependsOn: fields
+            context: update
+            span: right
+
+        css_class:
+            label: schultenmedia.formbuilder::lang.field.css_class
+            comment: schultenmedia.formbuilder::lang.field.css_class_comment
+            tab: schultenmedia.formbuilder::lang.tab.options
+            placeholder: class1 class2
+            span: left
+
+        redirect_to:
+            label: schultenmedia.formbuilder::lang.field.redirect_to
+            comment: schultenmedia.formbuilder::lang.comment.redirect_to
+            tab: schultenmedia.formbuilder::lang.tab.options
+            span: right

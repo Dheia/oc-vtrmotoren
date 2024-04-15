@@ -1,0 +1,18 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: schultenmedia.formbuilder::lang.field.import
+    list: $/schultenmedia/formbuilder/models/formimport/columns.yaml
+    modelClass: SchultenMedia\FormBuilder\Models\FormImport
+    redirect: schultenmedia/formbuilder/forms
+    permissions: schultenmedia.formbuilder.access_forms.import_export
+
+export:
+    title: schultenmedia.formbuilder::lang.field.export
+    fileName: forms
+    list: $/schultenmedia/formbuilder/models/formexport/columns.yaml
+    modelClass: SchultenMedia\FormBuilder\Models\FormExport
+    redirect: schultenmedia/formbuilder/forms
+    permissions: schultenmedia.formbuilder.access_forms.import_export

@@ -1,0 +1,93 @@
+uuid: a2605c13-4851-464d-bbdf-50352a14c687
+handle: Content\ProcessSteps
+type: mixin
+name: Proces
+
+fields:
+  
+  title:
+    label: Titel
+    type: text
+    tab: Algemeen
+    span: left
+    comment:
+
+  title_bold:
+    type: checkbox
+    label: Titel dikgedrukt maken
+    comment: Anders gebruik <span class="font-bold">text</span> om dikgedrukte delen aan te geven
+    span: right
+    tab: Algemeen
+
+  content:
+    tab: Algemeen
+    label: Inhoud
+    type: richeditor
+    size: large
+    span: full
+
+
+  buttons:
+    tab: Algemeen
+    type: mixin
+    source: Content\Buttons
+
+  columns:
+    tab: Stappen
+    type: repeater
+    span: full
+    form:
+
+        fields:
+
+
+          title:
+            label: Titel
+            type: text
+            span: left
+            comment:
+              
+          image_src:
+            type: mediafinder
+            label: Icoon
+            mode: image
+            span: right
+
+          description:
+            label: Titel
+            type: richeditor
+            span: left
+            comment:
+
+  _settings_bg:
+    tab: Instellingen
+    label: Achtergrond
+    type: section
+    span: full
+
+  settings_bg:
+    label: Achtergrond kleur
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Standaard
+      dark: Donker
+
+  settings_bg_image:
+    tab: Instellingen
+    type: mediafinder
+    label: Afbeelding
+    mode: image
+    span: auto
+
+  settings_background_text:
+    label: Achtergrond tekst
+    tab: Instellingen
+    span: auto
+
+  settings_effect:
+    tab: Instellingen
+    type: checkbox
+    label: Toon blauwe strepen effect
+    span: auto

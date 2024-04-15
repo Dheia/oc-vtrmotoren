@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    id: schultenmedia.formbuilder::lang.field.id
+    name: schultenmedia.formbuilder::lang.field.name
+    code: schultenmedia.formbuilder::lang.field.code
+    description: schultenmedia.formbuilder::lang.field.description
+    markup: schultenmedia.formbuilder::lang.field.markup
+    created_at: schultenmedia.formbuilder::lang.field.created_at
+    updated_at: schultenmedia.formbuilder::lang.field.updated_at
+    is_default: schultenmedia.formbuilder::lang.field.is_default

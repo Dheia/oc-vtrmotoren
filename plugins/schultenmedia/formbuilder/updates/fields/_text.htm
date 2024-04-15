@@ -1,0 +1,19 @@
+<div class="{{ wrapper_class }} form-group">
+    {% if label %}
+        <label for="{{ name }}" class="{{ label_class }}">{{ label }}</label>
+    {% endif %}
+
+    <input
+        id="{{ name }}"
+        type="text"
+        name="{{ name }}"
+        value="{{ default }}"
+        class="{{ class }} form-control"
+        placeholder="{{ placeholder }}"
+        {{ custom_attributes|raw }}
+    >
+
+    {% if comment %}
+        <p class="help-block">{{ comment|raw }}</p>
+    {% endif %}
+</div>

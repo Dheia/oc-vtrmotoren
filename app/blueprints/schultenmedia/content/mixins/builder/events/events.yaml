@@ -1,0 +1,15 @@
+uuid: 367bff79-57f5-4485-80e4-3cb04cbe6e89
+
+
+
+handle: Content\StaticEvents
+type: mixin
+name: Events sectie
+
+fields:
+  _section:
+    type: section
+    label: Events sectie
+  title:
+    label: Titel
+    span: left

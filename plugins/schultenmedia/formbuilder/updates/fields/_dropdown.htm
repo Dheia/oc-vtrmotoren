@@ -1,0 +1,27 @@
+<div class="{{ wrapper_class }} form-group">
+    {% if label %}
+        <label for="{{ name }}" class="{{ label_class }}">{{ label }}</label>
+    {% endif %}
+
+    <select
+        id="{{ name }}"
+        class="{{ class }} form-control"
+        name="{{ name }}"
+        {{ custom_attributes|raw }}>
+        {% if placeholder %}
+            <option value="">{{ placeholder }}</option>
+        {% endif %}
+
+        {% for key, label in options %}
+            <option
+                value="{{ key }}"
+                {{ key == default ? 'selected' : '' }}>
+                {{ label }}
+            </option>
+        {% endfor %}
+    </select>
+
+    {% if comment %}
+        <p class="help-block">{{ comment|raw }}</p>
+    {% endif %}
+</div>

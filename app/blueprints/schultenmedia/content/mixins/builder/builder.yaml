@@ -1,0 +1,114 @@
+uuid: 78650dea-607e-4c63-bde8-2364cb786072
+handle: Content\Builder
+type: mixin
+name: Builder
+
+fields:
+  builder:
+    type: repeater
+    label: Builder
+    displayMode: builder
+    itemsExpanded: false
+    span: adaptive
+    prompt: Voeg een blok toe
+    groups: 
+      hero:
+        name: Hero
+        icon: icon-laptop
+        description: Banner afbeelding met intro
+        titleFrom: title
+        fields:
+          hero:
+            type: mixin
+            source: Content\Hero
+      text-with-image:
+        name: Tekst met afbeelding
+        icon: icon-image
+        description: Tekst met afbeelding
+        titleFrom: title
+        useTabs: true
+        fields:
+          text-with-image:
+            type: mixin
+            source: Content\TextWithImage
+      text:
+        name: Tekst
+        icon: icon-align-justify
+        description: Tekst
+        titleFrom: title
+        useTabs: true
+        fields:
+          text:
+            type: mixin
+            source: Content\Text
+      section:
+        name: Sectie
+        icon: icon-columns
+        description: Sectie met instelbare blokken
+        titleFrom: title
+        useTabs: true
+        fields:
+          section:
+            type: mixin
+            source: Content\Section
+
+      events-bar:
+        name: Evenementen balk
+        icon: icon-calendar-3
+        description: Toon evenementen balk
+        titleFrom: title
+        useTabs: true
+        fields:
+          events:
+            type: mixin
+            source: Content\EventsBar
+      video:
+        name: Video
+        icon: icon-film
+        description: Toon video
+        titleFrom: title
+        useTabs: true
+        fields:
+          video:
+            type: mixin
+            source: Content\Video
+      static-occasions:
+        name: Aanbod
+        icon: icon-motorcycle
+        description: Toon occasions
+        titleFrom: title
+        useTabs: true
+        fields:
+          occasions:
+            type: mixin
+            source: Content\StaticOccasions
+      static-events:
+        name: Evenementen
+        icon: icon-calendar-clock
+        description: Toon evenementen
+        titleFrom: title
+        useTabs: true
+        fields:
+          events:
+            type: mixin
+            source: Content\StaticEvents
+      static-first-events:
+        name: Eerstvolgende evenementen
+        icon: icon-calendar-clock
+        description: Toon eerstvolgende evenementen
+        titleFrom: title
+        useTabs: true
+        fields:
+          first-events:
+            type: mixin
+            source: Content\StaticFirstEvents
+      process:
+        name: Stappen verkoop
+        icon: icon-sort-alpha-asc
+        description: Proces stappen
+        titleFrom: title
+        useTabs: true
+        fields:
+          steps:
+            type: mixin
+            source: Content\ProcessSteps

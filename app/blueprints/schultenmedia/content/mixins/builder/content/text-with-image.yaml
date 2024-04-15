@@ -1,0 +1,103 @@
+uuid: aebb7c89-a9b5-4398-b456-5f692d490ec2
+
+handle: Content\TextWithImage
+type: mixin
+name: Tekst met afbeelding
+titleFrom: title
+
+fields:
+    
+
+  title:
+    label: Titel
+    type: text
+    tab: Algemeen
+    span: left
+    comment:
+
+  title_bold:
+    type: checkbox
+    label: Titel dikgedrukt maken
+    comment: Anders gebruik <span class="font-bold">text</span> om dikgedrukte delen aan te geven
+    span: right
+    tab: Algemeen
+
+  content:
+    type: richeditor
+    tab: Algemeen
+    label: Tekst
+
+
+
+  buttons:
+    tab: Algemeen
+    type: mixin
+    source: Content\Buttons
+
+  image_position:
+    type: dropdown
+    tab: Algemeen
+    label: Afbeelding positie
+    span: left
+    options:
+      left: Links
+      right: Rechts
+      onder: Onder
+
+  image_src:
+    tab: Algemeen
+    type: mediafinder
+    label: Afbeelding
+    mode: image
+    span: left
+
+  settings_bg:
+    label: Achtergrond kleur
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Standaard
+      dark: Donker
+
+  settings_bg_image:
+    tab: Instellingen
+    type: mediafinder
+    label: Afbeelding
+    mode: image
+    span: auto
+
+  settings_width:
+    label: Breedte
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Normaal
+      narrow: Smal
+
+  settings_alignment:
+    label: Uitlijning
+    tab: Instellingen
+    type: dropdown
+    span: auto
+    options:
+      default: Links
+      "center": Midden
+
+  settings_background_text:
+    label: Achtergrond tekst
+    tab: Instellingen
+    span: auto
+
+  settings_icon:
+    tab: Instellingen
+    type: mediafinder
+    label: Icoon boven titel
+    mode: image
+    span: auto
+#  advanced_content:
+#    type: mixin
+#    source: Content\AdvancedFields
+#    label: Advanced Settings
+#    tab: Advanced

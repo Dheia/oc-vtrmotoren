@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: schultenmedia.formbuilder::lang.field_type.name
+
+# Model Form Field configuration
+form: $/schultenmedia/formbuilder/models/fieldtype/fields.yaml
+
+# Model Class name
+modelClass: SchultenMedia\FormBuilder\Models\FieldType
+
+# Default redirect location
+defaultRedirect: schultenmedia/formbuilder/fieldtypes
+
+# Create page
+create:
+    title: schultenmedia.formbuilder::lang.field_type.create
+    redirect: schultenmedia/formbuilder/fieldtypes/update/:id
+    redirectClose: schultenmedia/formbuilder/fieldtypes
+
+# Update page
+update:
+    title: schultenmedia.formbuilder::lang.field_type.edit
+    redirect: schultenmedia/formbuilder/fieldtypes
+    redirectClose: schultenmedia/formbuilder/fieldtypes

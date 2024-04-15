@@ -1,0 +1,18 @@
+<?php namespace SchultenMedia\Translate\Models;
+
+use Model;
+
+/**
+ * Attribute Model
+ */
+class Attribute extends Model
+{
+    /**
+     * @var string The database table used by the model.
+     */
+    public $table = 'sm_translate_attributes';
+
+    public $morphTo = [
+        'model' => []
+    ];
+}

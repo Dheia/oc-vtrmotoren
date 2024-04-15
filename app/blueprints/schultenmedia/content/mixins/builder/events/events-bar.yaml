@@ -1,0 +1,15 @@
+uuid: f2c2a48f-c5f4-45e7-9aa6-455949f2cd16
+
+
+handle: Content\EventsBar
+type: mixin
+name: Evenementen aankondigingsbalk
+titleFrom: title
+
+fields:
+    
+  title:
+    label: Titel
+    type: text
+    tab: Algemeen
+    span: left

@@ -1,0 +1,117 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    field_type:
+        label: schultenmedia.formbuilder::lang.field.field_type
+        type: relation
+        nameFrom: name
+        emptyOption: schultenmedia.formbuilder::lang.field.empty
+        span: left
+
+    label:
+        label: schultenmedia.formbuilder::lang.field.label
+        span: right
+
+    is_visible:
+        label: schultenmedia.formbuilder::lang.field.is_visible
+        comment: schultenmedia.formbuilder::lang.field.is_visible_comment
+        type: switch
+        default: true
+        span: left
+
+tabs:
+
+    fields:
+
+        name:
+            label: schultenmedia.formbuilder::lang.field.name
+            tab: schultenmedia.formbuilder::lang.tab.attributes
+            comment: schultenmedia.formbuilder::lang.field.name_comment
+            span: left
+
+        default:
+            label: schultenmedia.formbuilder::lang.field.default
+            tab: schultenmedia.formbuilder::lang.tab.attributes
+            comment: schultenmedia.formbuilder::lang.field.default_comment
+            span: right
+
+        placeholder:
+            label: schultenmedia.formbuilder::lang.field.placeholder
+            tab: schultenmedia.formbuilder::lang.tab.attributes
+            comment: schultenmedia.formbuilder::lang.field.placeholder_comment
+            span: left
+
+        class:
+            label: schultenmedia.formbuilder::lang.field.class
+            tab: schultenmedia.formbuilder::lang.tab.attributes
+            comment: schultenmedia.formbuilder::lang.field.class_comment
+            placeholder: class1 class2
+            span: right
+
+        custom_attributes:
+            label: schultenmedia.formbuilder::lang.field.custom_attributes
+            tab: schultenmedia.formbuilder::lang.tab.attributes
+            placeholder: id="Custom ID"
+            comment: schultenmedia.formbuilder::lang.field.custom_attributes_comment
+            span: left
+
+        comment:
+            label: schultenmedia.formbuilder::lang.field.comment
+            tab: schultenmedia.formbuilder::lang.tab.attributes
+            comment: schultenmedia.formbuilder::lang.field.comment_help
+            span: right
+
+        options:
+            label: schultenmedia.formbuilder::lang.field.options
+            tab: schultenmedia.formbuilder::lang.tab.list_options
+            commentAbove: schultenmedia.formbuilder::lang.field.options_comment
+            prompt: schultenmedia.formbuilder::lang.field.options_comment_prompt
+            type: repeater
+            form:
+                fields:
+                    o_key:
+                        label: schultenmedia.formbuilder::lang.field.option_key
+                        span: left
+                    o_label:
+                        label: schultenmedia.formbuilder::lang.field.option_label
+                        span: right
+
+        validation:
+            label: schultenmedia.formbuilder::lang.field.validation
+            tab: schultenmedia.formbuilder::lang.tab.validation
+            placeholder: required|email
+            comment: schultenmedia.formbuilder::lang.field.validation_comment
+            commentHtml: true
+            span: full
+
+        validation_messages:
+            label: schultenmedia.formbuilder::lang.field.validation_messages
+            tab: schultenmedia.formbuilder::lang.tab.validation
+            commentAbove: schultenmedia.formbuilder::lang.field.validation_msg_comment
+            prompt: schultenmedia.formbuilder::lang.field.validation_messages_prompt
+            type: repeater
+            form:
+                fields:
+                    rule:
+                        label: schultenmedia.formbuilder::lang.field.rule
+                        span: left
+                    message:
+                        label: schultenmedia.formbuilder::lang.field.message
+                        span: right
+
+        wrapper_class:
+            label: schultenmedia.formbuilder::lang.field.wrapper_class
+            tab: schultenmedia.formbuilder::lang.tab.styles
+            comment: schultenmedia.formbuilder::lang.field.wrapper_class_comment
+            placeholder: class1 class2
+            span: right
+
+        label_class:
+            label: schultenmedia.formbuilder::lang.field.label_class
+            tab: schultenmedia.formbuilder::lang.tab.styles
+            comment: schultenmedia.formbuilder::lang.comment.label_class
+            placeholder: class1 class2
+            span: left

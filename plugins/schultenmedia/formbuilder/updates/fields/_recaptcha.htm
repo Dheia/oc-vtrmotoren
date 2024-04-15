@@ -1,0 +1,16 @@
+<div class="{{ wrapper_class }} form-group">
+    {% if label %}
+        <label class="{{ label_class }}">{{ label }}</label>
+    {% endif %}
+
+    <div
+        class="g-recaptcha"
+        data-sitekey="{{ settings.site_key }}"
+        data-theme="{{ settings.theme }}"></div>
+
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl={{ settings.lang }}"></script>
+
+    {% if comment %}
+        <p class="help-block">{{ comment|raw }}</p>
+    {% endif %}
+</div>
